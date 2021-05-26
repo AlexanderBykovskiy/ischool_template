@@ -546,10 +546,21 @@ h3 {
     background-size: contain;
 }
 
+.additionally .additionally-card {
+    min-height: 360px;
+}
+
 .additionally .additionally-card .fill {
     background: #F4F1FF;
     border-radius: 20px;
     color: var(--color-black);
+    cursor: pointer;
+    border: 2px solid #F4F1FF;
+}
+
+.additionally .additionally-card .fill.back {
+    background-color: #fff;
+    border: 2px solid var(--color-margenta);
 }
 
 .additionally .additionally-card .fill > div {
@@ -569,6 +580,84 @@ h3 {
     background-position: left center;
     padding-left: 30px;
 }
+
+.additionally .flip-container {
+    perspective: 1000px;
+}
+
+.additionally .flip-container:hover .flipper,
+.additionally .flip-container.hover .flipper
+{
+    transform: rotateY(180deg);
+}
+
+.additionally .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+.additionally .front,
+.additionally .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.additionally .front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+.additionally .back {
+    transform: rotateY(180deg);
+}
+
+.additionally .flip-container:hover .flipper,
+.additionally .flip-container.hover .flipper,
+.additionally .flip-container.flip .flipper {
+    transform: rotateY(180deg);
+}
+
+
+@media (min-width: 992px) {
+    .additionally .additionally-card:nth-child(9n+2) .fill.front,
+    .additionally .additionally-card:nth-child(9n+3) .fill.front,
+    .additionally .additionally-card:nth-child(9n+4) .fill.front
+    {
+        background: #D5C6FF;
+        border-color: #D5C6FF;
+    }
+    .additionally .additionally-card:nth-child(9n+5) .fill.front,
+    .additionally .additionally-card:nth-child(9n+6) .fill.front,
+    .additionally .additionally-card:nth-child(9n+7) .fill.front
+    {
+        background: #eae2ff;
+        border-color: #eae2ff;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 758px) {
+    .additionally .additionally-card:nth-child(9n+2) .fill.front,
+    .additionally .additionally-card:nth-child(9n+3) .fill.front
+    {
+        background: #D5C6FF;
+        border-color: #D5C6FF;
+    }
+    .additionally .additionally-card:nth-child(9n+4) .fill.front,
+    .additionally .additionally-card:nth-child(9n+5) .fill.front,
+    .additionally .additionally-card:nth-child(9n+6) .fill.front,
+    .additionally .additionally-card:nth-child(9n+7) .fill.front
+    {
+        background: #eae2ff;
+        border-color: #eae2ff;
+    }
+}
+
 
 
 
