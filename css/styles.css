@@ -877,3 +877,31 @@ h3 {
     display: flex;
     gap: 18px;
 }
+
+
+.vacancies .vacancies-card .fill {
+    height: 100%;
+    background: #FAF8FC;
+    border-radius: 20px;
+}
+
+.vacancies .vacancies-card .fill > div {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.vacancies .vacancies-card .fill .image {
+    margin-bottom: 55px;
+}
+
+.vacancies .vacancies-card .fill .text {
+    font-weight: bold;
+    color: var(--color-black);
+    padding-right: 40px;
+}
+
+.vacancies .requirements ul {
+    padding-left: 1.5rem;
+}
