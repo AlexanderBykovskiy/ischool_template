@@ -96,9 +96,14 @@ h3 {
 
 /* Custom styles */
 
+.top-space {
+    height: 40px;
+}
+
 .navbar {
-    padding-top: 60px;
+    padding-top: 20px;
     padding-bottom: 20px;
+    background-color: #fff;
 }
 
 .navbar .buttons {
